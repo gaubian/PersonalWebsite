@@ -1,1 +1,17 @@
-I'm a PhD student in the [TALGO team](http://www.di.ens.fr/TalgoTeam.html.fr) at École Normale Supérieure, in Paris.
+# Who am I ?
+
+A PhD student in the [TALGO team](http://www.di.ens.fr/TalgoTeam.html.fr) at École Normale Supérieure, in Paris. I'm mainly interested in graph theory, optimization and algorithmics, especially algorithmic contests.
+
+# Why are you here ?
+
+## Teaching
+
+I am a teaching fellow at Paris University. See [here](teaching.html) for any information.
+
+## Algorithmic Contests
+
+If you want any information about algorithmic contests, in particular for the organization of ENS Paris-Saclay's algorithmic club, go [here](algorithmics.html).
+
+# How to contact me ?
+
+My mail address is <λabcd.d.b@c.a xyz aubian gaubian guillaume> but you can also contact me on Discord under username LeCaRiBoU#3837 or aubian on `irc.{rezosup.org, freenode.net, ulminfo.fr}`.
