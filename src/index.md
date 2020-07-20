@@ -4,6 +4,10 @@ A PhD student in the [TALGO team](http://www.di.ens.fr/TalgoTeam.html.fr) at Éc
 
 # Why are you here ?
 
+## Research
+
+I'm mainly interested in graph theory, in particular directed graph. I focus on digraph coloring, a notion which arised lately and consists in partitionning into Directed Acyclic Graphs.
+
 ## Teaching
 
 I am a teaching fellow at Paris University. See [here](teaching.html) for any information.
