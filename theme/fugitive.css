@@ -86,7 +86,7 @@ header {
   display: block;
   margin: 1em 0;
   padding: 1em;
-  border: 4px double #ccc;
+  border: 10px dashed #c8fbc5;
 }
 header h1 {
   margin: 0 0 0 0;
