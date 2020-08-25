@@ -1,0 +1,393 @@
+@charset "UTF-8"; 
+
+* { margin: 0; padding: 0; }
+html, body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: sans;
+  font-size: 1em;
+  color: #333;
+}
+#container {
+  padding: 0 0.4em;
+  margin: 0 auto;
+  min-width: 28em;
+  max-width: 40em;
+  position: relative;
+  overflow: auto;
+}
+#container header a, #container h1 a, #container h2 a,
+#container h3 a, #container h4 a {
+  color: #000;
+  text-decoration: none;
+}
+pre a, pre a:link {
+  color: white;
+}
+#container a:hover, #container a:active { color: #251; }
+pre > a:hover, pre > a:active { color: #8a7 !important;}
+pre > a:visited { color: #a5c !important; }
+#container footer p a:hover, #container footer p a:active { color: #251; }
+#container > footer {
+  text-align: center;
+}
+nav, #comments {
+  display: block;
+  margin: 0;
+  padding: 0.3em 1em;
+  font-family: monospace;
+}
+#comments{
+  border-top: 1px solid #ccc;
+  font-size: 80%;
+  text-align: center;
+}
+nav {
+  border-width: 1px;
+  border-color: #ccc;
+  border-style: solid none;
+  background: #f2f2f2;
+  text-align: left;
+  color: #aaa;
+  font-family: monospace;
+}
+time {
+  font-family: monospace;
+}
+#topnav {
+  border-style: none solid solid solid;
+  font-size: 1.3em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+nav ul { padding: 0; margin: 0; }
+nav ul.nav {
+  float: right;
+  width: 45%;
+  text-align: right;
+}
+nav ul li { 
+  display: inline;
+}
+nav .fixed span { visibility: hidden; }
+nav .fixed a span { visibility: visible; }
+nav ul li:before { content: " — "; }
+nav ul li:first-child:before { content: ""; }
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+#container nav ul li a:hover, #container nav ul li a:active { color: #251; }
+header {
+  display: block;
+  margin: 1em 0;
+  padding: 1em;
+  border: 10px dashed #c8fbc5;
+}
+header h1 {
+  margin: 0 0 0 0;
+  padding: 0;
+  font-size: 2.5em;
+  font-weight: normal;
+  text-align: center;
+}
+#container > header {
+  margin-top: 4em;
+  font-family: monospace;
+}
+header q {
+  font-size: 1.2em;
+  font-style: italic;
+}
+article {
+  display: block;
+  text-align: justify;
+  margin-bottom: 3em;
+  counter-reset: code figure example section subsection;
+}
+article header {
+  display: block;
+  margin: 2em 0 0 0; 
+  padding: 0;
+  border-style: none;
+  border-bottom: 1px dashed #ccc;
+}
+article header h1 {
+  margin: 0;
+  padding: 0 0 0.1em 0;
+  font-size: 1.35em;
+  font-weight: bold;
+  text-align: left;
+}
+article footer {
+  display: block;
+  margin: 0.3em 0 0 0;
+  padding: 0;
+  border-style: none;
+  color: #888;
+  font-size: 1em;
+  text-align: right;
+}
+article > div {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+article > div a {
+  color: #048;
+  text-decoration: underline;
+}
+article > div a:hover, article > div a:active { text-decoration: underline; }
+article > div a:visited { color: #608; }
+article > div h2 {
+  margin: 1em 0.5em 0.5em 0.5em;
+  font-size: 1.2em;
+  font-weight: normal;
+  counter-increment: section;
+  counter-reset: subsection;
+}
+article > div h2:before {
+  display: inline;
+  content: counter(section) ". ";
+}
+article > div h3 {
+  margin: 1em 0 0.5em 0;
+  font-size: 1.07em;
+  font-weight: bold;
+  counter-increment: subsection;
+}
+article > div h3:before {
+  display: inline;
+  content: counter(section) "." counter(subsection) ". ";
+}
+article > div .nonum:before {
+  content: none;
+}
+article > div .nonum {
+  counter-increment: none;
+}
+article > div h4 {
+  margin: 1em 0 0.5em 0;
+  font-size: 1.03em;
+  font-weight: bold;
+}
+article > div > p:first-child:first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+article > div > p.first:first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+article > div > p.notfirst:first-letter {
+  font-size: 1em;
+}
+.initial {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.banner:first-letter {
+  font-size: 1em !important;
+  font-weight: normal !important;
+}
+.banner {
+  font-style: italic;
+}
+article > div p {
+  margin: 0.5em 0.5em;
+  text-indent: 2em;
+}
+article > div p.important:before {
+  content: "important: ";
+  color: #f00;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+article > div p.warning:before {
+  content: "warning: ";
+  color: #fa0;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+article > div p.info:before {
+  content: "info: ";
+  color: #080;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+article > div p.note:before {
+  content: "note: ";
+  font-weight: bold;
+  font-variant: small-caps;
+}
+article > div p.example { counter-increment: example; }
+article > div p.example:before {
+  content: "example " counter(example) ":";
+  font-variant: small-caps;
+}
+article > div aside {
+  display: block;
+  padding: 0 0.5em;
+  margin: 0.5em 0 0.5em 0.5em;
+  width: 36%;
+  float: right;
+  border: 1px solid #ccc;
+  text-align: justify;
+  background-color: #f2f2f2;
+}
+article > div aside p {
+  font-size: 0.9em; 
+  margin: 0.5em 0;
+}
+article > div ul, article > div ol {
+  /*margin: 1em 0;*/
+  padding: 0 0.5em 0 1.5em;
+}
+article > div ul > li {
+  padding: 0 0 0 0.5em;
+  list-style-position: outside;
+  list-style-type: circle;
+}
+article > div li {
+  margin: 0 0 0.2em 1em;
+}
+
+article > div dl {
+  margin: 1em 0;
+  padding: 0;
+}
+article > div dl dt {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+article > div dl dd {
+  margin: 0 0 0.3em 0;
+  padding: 0 0 0 2em;
+}
+article > div blockquote {
+  margin: 1em 0;
+  padding: 0.5em;
+  padding-left: 2em;
+  background: #f2f2f2;
+  border-left: 0.1em solid #ccc;
+}
+article > div blockquote p { margin: 0.5em 0; }
+article > div code {
+  background-color: #dadada;
+  padding: 0 0.2em;
+}
+article > div pre {
+  margin: 1em 0;
+  padding: 0.5em;
+  overflow: auto;
+  color: #ccc;
+  background-color: #333;
+  max-height: 420px;
+}
+article > div pre .comment { color: #888; }
+article > div pre .comment-delimiter { color: #888; }
+article > div pre .constant { color: #d0d; }
+article > div pre .function-name { color: #27d; }
+article > div pre .keyword { color: #dd0; }
+article > div pre .preprocessor { color: #9c3; }
+article > div pre .string { color: #3af; }
+article > div pre .type { color: #fa0; }
+article > div pre .variable-name { color: #0b0; }
+article > div figure {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  text-align: center;
+}
+article > div figure figcaption {
+  display: block;
+  counter-increment: figure;
+}
+article > div figure.example figcation { counter-increment: example; }
+article > div figure figcaption:before {
+  display: inline;
+  content: "figure " counter(figure) ":";
+  font-variant: small-caps;
+}
+article > div figure.example figcaption:before {
+  display: inline;
+  content: "example " counter(example) ":";
+  font-variant: small-caps;
+}
+article > div .left {
+  float: left;
+  margin: 0 1em 0.5em 0;
+}
+article > div .right {
+  float: right;
+  margin: 0 0 0.5em 1em;
+}
+article > div .center { text-align: center; }
+article > div hr {
+  margin: 1.5em auto;
+  padding: 0;
+  height: 1px;
+  width: 80%;
+  border: none;
+  background-color: #aaa;
+}
+footer {
+  display: block;
+  margin: 1em 0 0 0;
+  padding: 1em;
+  border-top: 1px dotted #aaa;
+  color: #888;
+  font-size: 0.9em;
+  clear: both;
+  font-family: monospace;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+footer p a {
+  color: #666;
+  text-decoration: none;
+}
+.xsampa, .monospace {
+  font-family: DejaVu Sans Mono, Liberation Mono, monospace;
+}
+.foreign {
+  font-style: italic;
+}
+.update:before { content: "[Update: "; font-weight: bold;}
+.update:after { content: "]"; font-weight: bold;}
+
+.htmlmath {
+  font-style: italic;
+  font-family: serif;
+}
+
+.highlight_full + .highlight pre {
+  max-height: none;
+  line-height: 1.3em;
+}
+
+/* https://github.com/mathjax/MathJax-node/issues/204#issuecomment-208351504 */
+.mjx-chtml {font-size: 2.26ex ! important}
+.mjx-chtml .mjx-chtml {font-size: inherit ! important}
+
+summary {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+}
+
+summary {
+  font-weight: bold;
+}
+

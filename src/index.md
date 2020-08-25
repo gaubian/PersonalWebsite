@@ -18,7 +18,7 @@ If you want any information about algorithmic contests, in particular for the or
 
 ## Blogging
 
-Sometimes, I have interesting things to say, and that happens [here](blog.html).
+Sometimes, I have interesting things to say, and that happens [here](blog/).
 
 # How to contact me ?
 

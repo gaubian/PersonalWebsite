@@ -6,14 +6,23 @@ def erase_site():
     os.system('rm -rf site/*.html')
 
 def pandoc(x):
-    s = 'pandoc -B includes/head -A includes/foot -o site/' + x[:-3] + '.html src/' + x
+    pref = x.count('/') * '../'
+    s = 'pandoc -B includes/head -A includes/foot  --css=' + pref + 'theme/print.css --css=' + pref + 'theme/mobile.css --css=' + pref + 'theme/fugitive.css --css=' + pref + 'theme/pygments.css -o site/' + x[:-3] + '.html src/' + x
     os.system(s)
 
 def routine():
     erase_site()
-    for filename in os.listdir('src/'):
-        if filename.endswith('.md'):
-            pandoc(filename)
+    for rt, dirs,files in os.walk('src/'):
+        root = rt[4:]
+        if root != '':
+            root += '/'
+        os.system('mkdir site/' + root)
+        for filename in files:
+            if filename.endswith('.md'):
+                pandoc(root + filename)
+    #for filename in os.listdir('src/'):
+    #    if filename.endswith('.md'):
+    #       pandoc(filename)
 
 while True:
     now = dt.datetime.now()
